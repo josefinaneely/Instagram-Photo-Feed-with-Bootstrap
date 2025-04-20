@@ -2,40 +2,148 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Feed with Bootstrap</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"
-        <script src="https://kit.fontawesome.com/a5a5ea1d6c.js" crossorigin="anonymous">
-    </script>
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
+    <title>Hello, world!</title>
 </head>
 
 <body>
-    <style>
-        .nav-pill .nav-link {
-            color: grey;
-        }
-
-        .nav-pill .nav-link.active {
-            color: blue;
-        }
-    </style>
-
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light navbar-expand-lg my-3">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <i class="fa-brands fa-instagram"></i>
-                <div class="d-inline-block align-text-top">
-                    <h1>Instagram</h1>
-                </div>
+
+                Instagram
             </a>
+
+            <div class="d-flex align-text-top">
+                <button type="button" class="btn btn-success me-2" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    Create new post
+                </button>
+
+                <div class="dropdown btn-group dropstart">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </nav>
-</body>
 
+    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+        <div class="d-flex justify-content-center">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link text-primary justify-content-center" id="pills-home-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                    aria-selected="true">
+                    <i class="fa-solid fa-border-all"></i>
+                </button>
+            </li>
+
+            <div class="container">
+                <div class="row mb-4 mt-4">
+                    <div class="col-4 mb-4 mt-4">
+                        <img src="https://cdn.pixabay.com/photo/2019/05/08/19/56/dogs-4189517_1280.jpg" alt="Imagen 1"
+                            class="card-img-top" />
+                    </div>
+                    <div class="col-4 mb-4 mt-4">
+                        <img src="https://media.istockphoto.com/id/1799323584/es/foto/paisaje-tropical-con-playa-con-cocoteros-al-atardecer.jpg?s=2048x2048&w=is&k=20&c=PV8SglHj-FsAW1SE7_zuAr3jneFkTjnh--LOywkFaIk="
+                            alt="Imagen 2" class="card-img-top" />
+                    </div>
+                    <div class="col-4 mb-4 mt-4">
+                        <img src="https://cdn.pixabay.com/photo/2018/09/10/18/34/cloud-3667692_1280.jpg" alt="Imagen 3"
+                            class="card-img-top" />
+                    </div>
+                    <div class="col-4 mb-4">
+                        <img src="https://media.istockphoto.com/id/1341287530/photo/purple-jellyfish-on-mediterranean-sea-majorca-island.jpg?s=2048x2048&w=is&k=20&c=S1vl3jQfX6IHklowbaiTuZ-n5nqNBzH3b-RzAtAk2dI="
+                            alt="Imagen 4" class="card-img-top" />
+                    </div>
+                    <div class="col-4 mb-4">
+                        <img src="https://cdn.pixabay.com/photo/2020/04/15/21/04/mantis-5048219_960_720.jpg"
+                            alt="Imagen 5" class="card-img-top" />
+                    </div>
+                    <div class="col-4 mb-4">
+                        <img src="https://cdn.pixabay.com/photo/2023/09/27/07/29/mantis-8278996_1280.jpg" alt="Imagen 6"
+                            class="card-img-top" />
+                    </div>
+                    <div class="col-4 mb-4">
+                        <img src="https://cdn.pixabay.com/photo/2020/04/24/04/56/night-5085006_1280.jpg" alt="Imagen 7"
+                            class="img-fluid" />
+                    </div>
+                    <div class="col-4 mb-4">
+                        <img src="https://cdn.pixabay.com/photo/2019/11/15/15/29/sky-4628663_1280.jpg" alt="Imagen 8"
+                            class="img-fluid" />
+                    </div>
+                    <div class="col-4 mb-4">
+                        <img src="https://cdn.pixabay.com/photo/2020/03/10/18/47/sea-4919895_1280.jpg" alt="Imagen 9"
+                            class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                    <i class="fa-solid fa-square"></i>
+                </button>
+            </li>
+
+            <div class="container">
+                <div class="row">
+                    <div class="row-9 mb-4 mt-4"></div>
+                </div>
+            </div>
+        </div>
+    </ul>
+
+    <!-- Modal -->
+    <div class="modal fade text-align" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title align-text-top" id="exampleModalLabel">
+                        Create new post
+                    </h5>
+
+                    <form class="mb-3 bg-light">
+                        <p>
+                            Insert Caption Here:
+                            <input name="Insert Caption Here" type="text" value="" />
+                        </p>
+                        <input type="submit" />
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a5a5ea1d6c.js" crossorigin="anonymous"></script>
+</body>
 
 </html>
